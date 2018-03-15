@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[My new post]]></title>
-    <url>%2F2018%2F03%2FMy-new-post%2F</url>
+    <title><![CDATA[在Ubuntu 16.04 中安装配置Tomcat服务器、Mysql数据库]]></title>
+    <url>%2F2018%2F03%2F%E5%9C%A8Ubuntu%2016.04%20%E4%B8%AD%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AETomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>Mysql</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[在Ubuntu 16.04 中安装配置Hadoop 3.0.0]]></title>
