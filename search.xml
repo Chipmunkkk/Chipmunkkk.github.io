@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[My new post]]></title>
+    <url>%2F2018%2F03%2FMy-new-post%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[在Ubuntu 16.04 中安装配置Hadoop 3.0.0]]></title>
+    <url>%2F2018%2F03%2F%E5%9C%A8Ubuntu%2016.04%20%E4%B8%AD%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEHadoop%203.0.0%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hadoop</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F03%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
