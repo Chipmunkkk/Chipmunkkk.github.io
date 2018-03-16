@@ -98,7 +98,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.shaozb.xin/2018/03/在Ubuntu 16.04 中安装配置Hadoop 3.0.0/">
+    <link itemprop="mainEntityOfPage" href="https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邵珠彬">
@@ -305,148 +305,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/在Ubuntu 16.04 中安装配置Hadoop 3.0.0/" itemprop="url">在Ubuntu 16.04 中安装配置Hadoop 3.0.0</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T11:23:53+08:00">
-                2018-03-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.shaozb.xin/2018/03/在Ubuntu 16.04 中安装配置Web服务器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邵珠彬">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shaozb's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/在Ubuntu 16.04 中安装配置Web服务器/" itemprop="url">在Ubuntu 16.04 中安装配置Web服务器</a></h1>
+                <a class="post-title-link" href="/2018/03/configure-tomcat-in-ubuntu-16.04/" itemprop="url">在Ubuntu 16.04 中安装配置Tomcat</a></h1>
         
 
         <div class="post-meta">
@@ -494,6 +353,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/03/configure-tomcat-in-ubuntu-16.04/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/" class="cy_cmt_count" data-xid="2018/03/configure-tomcat-in-ubuntu-16.04/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
           
 
           
@@ -519,79 +389,14 @@
 
       
         
-          
-             <h1>安装环境</h1>
-
-<ul>
-<li>硬件: 阿里云ECS服务器  </li>
-<li>系统: Ubuntu 16.04  </li>
-</ul>
-<h1>配置Java环境</h1>
-
-<ul>
-<li>在 usr/local 下新建文件夹Java<br><code>cd /usr/local</code><br><code>mkdir Java</code></li>
-<li>利用FTP软件将jdk上传至 usr/local/Java 文件夹</li>
-<li>cd 至 jdk 所在文件夹中<br><code>cd /usr/local/Java</code></li>
-<li>解压 jdk<br><code>tar -xzvf jdk-8u151-linux-x64.tar.gz</code></li>
-<li>删除 jdk 压缩包<br><code>rm jdk-8u151-linux-x64.tar.gz</code></li>
-<li><p>配置 Java 环境变量</p>
-<ol>
-<li><p>配置 /etc/profile 文件<br>vim /etc/profile</p>
-</li>
-<li><p>在末尾添加以下内容(根据自己Jdk安装路径及版本自行调整)<br>#setting Java environment<br>export JAVA_HOME=/usr/local/Java/jdk1.8.0_151<br>export JRE_HOME=$JAVA_HOME/jre<br>export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib<br>export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</p>
-</li>
-<li><p>使修改生效<br>source /etc/profile</p>
-</li>
-</ol>
-</li>
-<li><p>至此 Java 环境已经配置完成,可以通过以下命令来检查<br><code>java -version</code><br>或<br><code>javac</code></p>
-</li>
-</ul>
-<h1>配置Tomcat服务器</h1>
-
-<ul>
-<li>在 usr/local 下新建文件夹 Tomcat<br><code>cd usr/local</code><br><code>mkdir Tomcat</code></li>
-<li>利用 FTP 软件将 Tomcat 安装包上传至 usr/local/Tomcat 文件夹</li>
-<li>cd 至 Tomcat 所在文件夹中<br><code>cd usr/local/Tomcat</code></li>
-<li>解压 Tomcat<br><code>tar -xvf apache-tomcat-9.0.2.tar</code></li>
-<li>删除 Tomcat 安装包<br><code>rm apache-tomcat-9.0.2.tar</code></li>
-<li><p>启动 Tomcat 服务</p>
-<ol>
-<li><p>cd 至 bin 文件夹<br>cd /bin</p>
-</li>
-<li><p>启动服务<br>./startup.sh</p>
-</li>
-</ol>
-</li>
-<li>至此 Tomcat 服务器已经配置完毕,打开浏览器通过<a href="http://ip:8080访问服务器,出现以下图片表示配置成功" target="_blank" rel="noopener">http://ip:8080访问服务器,出现以下图片表示配置成功</a></li>
-</ul>
-<h1>配置Mysql服务</h1>
-
-<ul>
-<li><p>通过ubuntu的软件包管理器安装Mysql<br><code>sudo apt-get update</code><br><code>sudo apt-get install mysql-server</code></p>
-</li>
-<li><p>期间会为mysql服务配置密码（可自行设置）</p>
-</li>
-</ul>
-<h1>配置phpMyAdmin（选配）</h1>
-
-<ul>
-<li>首先配置apache服务器<br><code>sudo apt-get install apache2</code></li>
-<li>安装phpMyAdmin，安装时选择 apache服务器（期间会配置用户名密码）<br><code>sudo apt-get install phpmyadmin</code>  </li>
-<li>同时安装这两个<br><code>sudo apt-get install php-mbstring</code><br><code>sudo apt-get install php-gettext</code>  </li>
-<li>全部安装好以后，建立软连接<br><code>sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin</code></li>
-<li>修改php配置文件<br><code>sudo vim /etc/php/7.0/apache2/php.ini</code>  </li>
-<li>修改以下配置，保存并退出</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display_errors = On</span><br><span class="line"></span><br><span class="line">extension = php_mbstring.dl</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>重启apache服务器<br><code>sudo /etc/init.d/apache2 restart</code></p>
-</li>
-<li><p>至此phpMyAdmin就算配置完成，通过ip/phpmyadmin访问即可</p>
-</li>
-</ul>
-
-          
+          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="https://baike.baidu.com/item/tomcat" target="_blank" rel="noopener">Tomcat</a> 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用。<br><a href="https://baike.baidu.com/item/mySQL" target="_blank" rel="noopener">MySQL</a> 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。<br>所以本文选用Tomcat作为web服务器，MySQL作为数据库系统来运行web项目。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/configure-tomcat-in-ubuntu-16.04/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -675,7 +480,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +502,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -738,6 +543,13 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -787,13 +599,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
 
     
@@ -912,6 +717,10 @@
 
 
 
+
+  
+    <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytqfKVC3"></script>
+  
 
 
 
