@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Tomcat,Mysql," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -79,40 +79,18 @@
 
 
 
-<meta name="description" content="简介Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用。MySQL 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。所以本文选用Tomcat作为web服务器，MySQL作为数据库系统来运行web项目。">
-<meta name="keywords" content="Tomcat,Mysql">
+<meta name="description" content="概述Java作为一种强类型语言，必须为每一个变量声明一种类型。Java种的数据类型分为两大类：基本数据类型、引用数据类型。 基本数据类型可以分为三类数据类型：数值类型、字符类型以及布尔类型。同时又可以分为八种数据类型：4种整型、2种浮点类型、1种字符类型以及1种布尔类型。 引用数据类型有：数组、类以及接口。 Java种数据类型的取值范围是固定的，不会随着机器硬件环境的不同而产生差异。">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Ubuntu 16.04 中安装配置Tomcat">
-<meta property="og:url" content="https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/index.html">
+<meta property="og:title" content="Java中的数据类型">
+<meta property="og:url" content="https://blog.shaozb.xin/2018/04/java-type-of-data/index.html">
 <meta property="og:site_name" content="Shaozb&#39;s Blog">
-<meta property="og:description" content="简介Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用。MySQL 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。所以本文选用Tomcat作为web服务器，MySQL作为数据库系统来运行web项目。">
+<meta property="og:description" content="概述Java作为一种强类型语言，必须为每一个变量声明一种类型。Java种的数据类型分为两大类：基本数据类型、引用数据类型。 基本数据类型可以分为三类数据类型：数值类型、字符类型以及布尔类型。同时又可以分为八种数据类型：4种整型、2种浮点类型、1种字符类型以及1种布尔类型。 引用数据类型有：数组、类以及接口。 Java种数据类型的取值范围是固定的，不会随着机器硬件环境的不同而产生差异。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/create-java-folder.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-jdk-1.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-jdk-2.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/copy-jdk-to-java.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-jdk-1.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-jdk-2.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/configure-java-environment.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/check-java.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/create-tomcat-folder.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-tomcat-1.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-tomcat-2.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/copy-tomcat-to-tomcat.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-tomcat-1.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/delete-tomcat-package.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/start-tomcat-server.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/tomcat-complete.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/set-password-1.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/select-apache2.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/set-password-for-phpmyadmin.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/login-for-phpmyadmin.png">
-<meta property="og:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/phpmyadmin-complete.png">
-<meta property="og:updated_time" content="2018-03-16T11:34:13.005Z">
+<meta property="og:updated_time" content="2018-04-26T04:25:18.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Ubuntu 16.04 中安装配置Tomcat">
-<meta name="twitter:description" content="简介Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用。MySQL 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。所以本文选用Tomcat作为web服务器，MySQL作为数据库系统来运行web项目。">
-<meta name="twitter:image" content="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/create-java-folder.png">
+<meta name="twitter:title" content="Java中的数据类型">
+<meta name="twitter:description" content="概述Java作为一种强类型语言，必须为每一个变量声明一种类型。Java种的数据类型分为两大类：基本数据类型、引用数据类型。 基本数据类型可以分为三类数据类型：数值类型、字符类型以及布尔类型。同时又可以分为八种数据类型：4种整型、2种浮点类型、1种字符类型以及1种布尔类型。 引用数据类型有：数组、类以及接口。 Java种数据类型的取值范围是固定的，不会随着机器硬件环境的不同而产生差异。">
 
 
 
@@ -142,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/"/>
+  <link rel="canonical" href="https://blog.shaozb.xin/2018/04/java-type-of-data/"/>
 
 
 
 
 
-  <title>在Ubuntu 16.04 中安装配置Tomcat | Shaozb's Blog</title>
+  <title>Java中的数据类型 | Shaozb's Blog</title>
   
 
 
@@ -309,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/">
+    <link itemprop="mainEntityOfPage" href="https://blog.shaozb.xin/2018/04/java-type-of-data/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邵珠彬">
@@ -326,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在Ubuntu 16.04 中安装配置Tomcat</h1>
+          <h1 class="post-title" itemprop="name headline">Java中的数据类型</h1>
         
 
         <div class="post-meta">
@@ -338,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T10:24:50+08:00">
-                2018-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T12:21:15+08:00">
+                2018-04-26
               </time>
             
 
@@ -361,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -380,8 +358,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/03/configure-tomcat-in-ubuntu-16.04/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/03/configure-tomcat-in-ubuntu-16.04/" itemprop="commentsCount"></span>
+                <a href="/2018/04/java-type-of-data/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/04/java-type-of-data/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -409,70 +387,113 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="https://baike.baidu.com/item/tomcat" target="_blank" rel="noopener">Tomcat</a> 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用。<br><a href="https://baike.baidu.com/item/mySQL" target="_blank" rel="noopener">MySQL</a> 是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。<br>所以本文选用Tomcat作为web服务器，MySQL作为数据库系统来运行web项目。</p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Java作为一种强类型语言，必须为每一个变量声明一种类型。Java种的数据类型分为两大类：<strong>基本数据类型</strong>、<strong>引用数据类型</strong>。</p>
+<p>基本数据类型可以分为三类数据类型：<strong>数值类型</strong>、<strong>字符类型</strong>以及<strong>布尔类型</strong>。同时又可以分为八种数据类型：4种<strong>整型</strong>、2种<strong>浮点类型</strong>、1种<strong>字符类型</strong>以及1种<strong>布尔类型</strong>。</p>
+<p>引用数据类型有：<strong>数组</strong>、<strong>类</strong>以及<strong>接口</strong>。</p>
+<p>Java种数据类型的取值范围是固定的，不会随着机器硬件环境的不同而产生差异。</p>
 <a id="more"></a>
-<h1 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h1><ul>
-<li>平台: <a href="https://www.ubuntu.com/download/desktop" target="_blank" rel="noopener">Ubuntu 16.04</a> </li>
-<li>软件: <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">jdk1.8.0_161</a> | <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">tomcat-9.0.6</a></li>
-</ul>
-<h1 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h1><ol>
-<li>在 /usr/local 下新建文件夹Java<br> <code>cd /usr/local</code><br> <code>sudo mkdir Java</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/create-java-folder.png" alt="create java folder"></li>
-<li><p>下载 jdk 并将下载好的 jdk 文件拷贝至 /usr/local/Java 文件夹<br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-jdk-1.png" alt="download jdk"><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-jdk-2.png" alt="download jdk"><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/copy-jdk-to-java.png" alt="copy to java"></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/chipmunk/Downloads #chipmunk处为用户名，根据自己情况调整</span><br><span class="line">sudo cp jdk-8u161-linux-x64.tar.gz /usr/local/Java/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cd 至 jdk 所在文件夹中<br> <code>cd /usr/local/Java</code></p>
-</li>
-<li>解压 jdk<br> <code>sudo tar -xzvf jdk-8u161-linux-x64.tar.gz</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-jdk-1.png" alt="unzip"></li>
-<li>删除 jdk 压缩包<br> <code>sudo rm jdk-8u161-linux-x64.tar.gz</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-jdk-2.png" alt="delete jdk package"></li>
-<li><p>开始配置 Java 环境变量</p>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>变量名指向具体的数值的数据类型我们称之为基本数据类型。在声明基本数据类型之后，Java会立即为其分配内存空间。</p>
+<h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>整型就是指我们所理解的数学概念上的整数，可以为负数。Java一共为我们提供了4种整型（<code>int，short，long，byte</code>）</p>
+<h4 id="int"><a href="#int" class="headerlink" title="int"></a>int</h4><p>int 是编程种最常用的一种整型，每存储一个int类型的数据，需要占用4个字节。  </p>
 <ul>
-<li>配置 /etc/profile 文件<br><code>sudo vim /etc/profile</code>（如果未安装vim，请用以下命令安装vim <code>sudo apt-get update</code> | <code>sudo apt-get install vim</code>）</li>
-<li><p>在末尾添加以下内容(根据自己Jdk安装路径及版本自行调整)</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#setting Java environment</span><br><span class="line">export JAVA_HOME=/usr/local/Java/jdk1.8.0_161</span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/configure-java-environment.png" alt="configure"></p>
-</li>
-<li>使修改生效<br><code>source /etc/profile</code>  </li>
+<li>最大值为：<code>2,147,483,647（2^31 - 1）</code>  </li>
+<li>最小值为：<code>-2,147,483,648（-2^31）</code>  </li>
+<li>默认值为：<code>0</code></li>
 </ul>
-</li>
-<li><p>至此 Java 环境已经配置完成，可以通过以下命令来检查<br> <code>java -version</code><br> 或<br> <code>javac</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/check-java.png" alt="check"></p>
-</li>
-</ol>
-<h1 id="配置Tomcat服务器"><a href="#配置Tomcat服务器" class="headerlink" title="配置Tomcat服务器"></a>配置Tomcat服务器</h1><ol>
-<li>在 /usr/local 下新建文件夹 Tomcat<br> <code>cd /usr/local</code><br> <code>sudo mkdir Tomcat</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/create-tomcat-folder.png" alt="create tomcat folder"></li>
-<li><p>下载 Tomcat 并将下载好的 Tomcat 文件拷贝至 /usr/local/Tomcat 文件夹<br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-tomcat-1.png" alt="download tomcat"><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/download-tomcat-2.png" alt="download tomcat"><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/copy-tomcat-to-tomcat.png" alt="copy to tomcat"></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/chipmunk/Downloads #chipmunk处为用户名，根据自己情况调整</span><br><span class="line">sudo cp apache-tomcat-9.0.6.tar.gz /usr/local/Tomcat/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cd 至 Tomcat 所在文件夹中<br> <code>cd /usr/local/Tomcat</code></p>
-</li>
-<li>解压 Tomcat<br> <code>sudo tar -xvf apache-tomcat-9.0.6.tar</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/unzip-tomcat-1.png" alt="unzip tomcat"></li>
-<li>删除 Tomcat 安装包<br> <code>sudo rm apache-tomcat-9.0.6.tar</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/delete-tomcat-package.png" alt="delete tomcat package"></li>
-<li><p>启动 Tomcat 服务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1000</span>;  </span><br><span class="line"><span class="keyword">int</span> j = -<span class="number">2000</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="short"><a href="#short" class="headerlink" title="short"></a>short</h4><p>short 是一种短整型，一个short类型的变量，需要占用2个字节。  </p>
 <ul>
-<li>cd 至 bin 文件夹<br><code>cd apache-tomcat-9.0.6/bin/</code><blockquote>
-<p>如果提示没有权限，请用以下命令以root用户登录继续访问<br><code>sudo su</code><br>以root用户登录后可能要重新使java变量生效<br><code>source /etc/profile</code></p>
+<li>最大值为：<code>32,767（2^15 - 1）</code>  </li>
+<li>最小值为：<code>-32,768（-2^15）</code>  </li>
+<li>默认值为：<code>0</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> i = <span class="number">100</span>;  </span><br><span class="line"><span class="keyword">short</span> j = -<span class="number">200</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="long"><a href="#long" class="headerlink" title="long"></a>long</h4><p>long 是一长整型，通常用来存储比较大的整数。一个long类型的变量，需要占用8个字节。  </p>
+<ul>
+<li>最大值为：<code>9,223,372,036,854,775,807（2^63 - 1）</code>  </li>
+<li>最小值为：<code>-9,223,372,036,854,775,808（-2^63）</code>  </li>
+<li>默认值为：<code>0L</code> （通常在值后面加一个大写的英文字母<strong>L</strong>）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> i = <span class="number">100000</span>;  </span><br><span class="line"><span class="keyword">long</span> j = -<span class="number">200000</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="byte"><a href="#byte" class="headerlink" title="byte"></a>byte</h4><p>byte是Java中最小的数据类型。一个byte类型的变量，仅占用1个字节。  </p>
+<ul>
+<li>最大值为：<code>127（-2^7 - 1）</code>  </li>
+<li>最小值为：<code>-128（-2^7）</code>  </li>
+<li>默认值为：<code>0</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> i = <span class="number">10</span>;  </span><br><span class="line"><span class="keyword">byte</span> j = -<span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>浮点类型用于表示有小数部分的数值，也就是我们通常说的<code>小数</code>。Java一共为我们提供了2种浮点类型（<code>float，double</code>）</p>
+<h4 id="float"><a href="#float" class="headerlink" title="float"></a>float</h4><p>float为单精度浮点数，运行速度相比double更快，占内存更小，但是当数值非常大或者非常小的时候会变得不精确。一个float类型的变量，存储需要4个字节。</p>
+<ul>
+<li>取值范围：大约<code>± 3.402 823 47E+38F</code>（有效位数6～7位）</li>
+<li>默认值为：<code>0.0f</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> i = <span class="number">10.345f</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="double"><a href="#double" class="headerlink" title="double"></a>double</h4><p>double为双精度浮点数。一个double类型的变量，存储需要8个字节。</p>
+<ul>
+<li>取值范围：大约<code>± 1.797 693 134 862 315 70E+308</code>（有效位数15位）</li>
+<li>默认值为：<code>0.0d</code>（d 可省略）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> i = <span class="number">3.1415</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><h3 id="char"><a href="#char" class="headerlink" title="char"></a>char</h3><p>char 类型是一个单一的 16 位 Unicode 字符，用来表示单一字符。</p>
+<ul>
+<li>最大值为：<code>\uffff</code>（即为65,535）</li>
+<li>最小值为：<code>\u0000</code>（即为0）</li>
+<li>char 类型可以储存任何字符；</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> i = <span class="string">'a'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><h3 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h3><p>boolean类型只有两个值：<code>true</code>、<code>false</code>，用来判定逻辑条件。</p>
+<ul>
+<li>默认值为：<code>false</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isSuccess = <span class="keyword">true</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="基本数据类型之间的转换"><a href="#基本数据类型之间的转换" class="headerlink" title="基本数据类型之间的转换"></a>基本数据类型之间的转换</h2><h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><p>数值类型与字符类型可以混合运算。在运算中，不同类型的数据先转化为同一类型，然后进行运算。</p>
+<blockquote>
+<p>低  ————————————————&gt;  高<br>byte，short，char —&gt; int —&gt; long—&gt; float —&gt; double</p>
 </blockquote>
-</li>
-<li>启动服务<br><code>./startup.sh</code><br><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/start-tomcat-server.png" alt="start server"></li>
+<p>数据类型转换必须满足如下规则：</p>
+<ul>
+<li>不能对boolean类型进行类型转换。</li>
+<li>不能把对象类型转换成不相关类的对象。</li>
+<li>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。</li>
+<li>转换过程中可能导致溢出或损失精度。</li>
+<li>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入。</li>
 </ul>
-</li>
-<li><p>至此 Tomcat 服务器已经配置完毕，打开浏览器通过 localhost:8080 访问服务器，出现以下图片表示配置成功<br><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/tomcat-complete.png" alt="tomcat complete"></p>
-</li>
-</ol>
-<h1 id="配置Mysql"><a href="#配置Mysql" class="headerlink" title="配置Mysql"></a>配置Mysql</h1><ol>
-<li><p>通过ubuntu的软件包管理器安装Mysql<br><code>sudo apt-get update</code><br><code>sudo apt-get install mysql-server</code></p>
-</li>
-<li><p>期间会为mysql服务配置密码（可自行设置）<br><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/set-password-1.png" alt="set password for mysql"></p>
-</li>
-</ol>
-<h1 id="phpMyAdmin（可选）"><a href="#phpMyAdmin（可选）" class="headerlink" title="phpMyAdmin（可选）"></a>phpMyAdmin（可选）</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p><a href="https://baike.baidu.com/item/PhpMyAdmin" target="_blank" rel="noopener">phpMyAdmin</a> 是一个以PHP为基础，以Web-Base方式架构在网站主机上的MySQL的数据库管理工具，让管理者可用Web接口管理MySQL数据库。借由此Web接口可以成为一个简易方式输入繁杂SQL语法的较佳途径，尤其要处理大量资料的汇入及汇出更为方便。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ol>
-<li>首先配置apache服务器<br> <code>sudo apt-get install apache2</code></li>
-<li>安装phpMyAdmin，安装时选择 apache服务器（期间会配置用户名密码）<br> <code>sudo apt-get install phpmyadmin</code><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/select-apache2.png" alt="set apache2"><br> <img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/set-password-for-phpmyadmin.png" alt="set password for phpmyadmin"></li>
-<li>全部安装好以后，建立软连接<br> <code>sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin</code></li>
-<li>重启apache服务器<br> <code>sudo /etc/init.d/apache2 restart</code>  </li>
-<li>至此phpMyAdmin就算配置完成，通过localhost/phpmyadmin访问即可<br><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/login-for-phpmyadmin.png" alt="login phpmyadmin"><br><img src="https://img.shaozb.xin/Blog/2018/03/configure-tomcat-in-ubuntu-16.04/phpmyadmin-complete.png" alt="phpmyadmin complete">  </li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>到此，关于如何在 Ubuntu 16.04 下安装配置tomcat服务器以及相应的服务或者工具已经全部完成。以上步骤全部在本人虚拟机中实验完成，均可正常配置。如果出现什么问题，可以在评论区留言，我会及时解答。这篇博客是我的第一片技术博客，如果大家有什么建议，也可以在评论区指出，我会及时更正哟~</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">byte</span> b1 = <span class="number">10</span>; <span class="comment">//定义一个byte类型</span></span><br><span class="line">    <span class="keyword">short</span> s1 = b1;<span class="comment">//byte自动类型转换为short</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> c1= <span class="string">'a'</span>; <span class="comment">//定义一个char类型</span></span><br><span class="line">    <span class="keyword">int</span> i1 = c1; <span class="comment">//char自动类型转换为int</span></span><br><span class="line">    <span class="keyword">long</span> l1 = i1; <span class="comment">//int自动类型转换为long</span></span><br><span class="line">    <span class="keyword">float</span> f1 = l1; <span class="comment">//long自动类型转换为float</span></span><br><span class="line">    <span class="keyword">double</span> d1 = f1; <span class="comment">//float自动类型转换为double</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"byte自动类型转换为short后的值等于："</span> + s1);</span><br><span class="line">    System.out.println(<span class="string">"char自动类型转换为int后的值等于："</span> + i1);</span><br><span class="line">    System.out.println(<span class="string">"int自动类型转换为long后的值等于："</span> + l1);</span><br><span class="line">    System.out.println(<span class="string">"long自动类型转换为float后的值等于："</span> + f1);</span><br><span class="line">    System.out.println(<span class="string">"float自动类型转换为double后的值等于："</span> + d1);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行以上代码得到的结果是：</p>
+<blockquote>
+<p>byte自动类型转换为short后的值等于：10<br>char自动类型转换为int后的值等于：97<br>int自动类型转换为long后的值等于：97<br>long自动类型转换为float后的值等于：97.0<br>float自动类型转换为double后的值等于：97.0</p>
+</blockquote>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>当然，我们并不是一直想要int类型转换为double类型，可能某一天我们想把double转换成int类型。Java也想到了这一点，所以它支持蕾丝这种转换，我们称之为强制类型转换。</p>
+<ul>
+<li>条件是转换的数据类型必须是兼容的。</li>
+<li>格式：(type)value type是要强制类型转换后的数据类型。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i1 = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">byte</span> b = (<span class="keyword">byte</span>)i1;<span class="comment">//将int类型强制转换为byte类型</span></span><br></pre></td></tr></table></figure>
+<p><strong>如果在强制类型转换的过程中，超出目标类型的范围，则结果会被截断成为一个完全不同的值，比如 <code>(byte)300</code> 结果为44。</strong></p>
+<h1 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h1><p>变量名指向存数据对象的内存地址的数据类型我们称之为引用数据类型。它以特殊的方式（类似C指针）指向对象实体（具体的值），这类变量声明时不会分配内存，只是存储了一个内存地址。</p>
+<p>引用类型一般是通过new关键字来创建，它存放在内存的堆中，可以在运行时动态的分配内存大小，生存期也不必事先告诉编译器，当引用类型变量不被使用时，Java内部的垃圾回收器GC会自动回收走。</p>
+<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><p>String类型是项目中必不可少且使用最多的数据类型，它属于引用数据类型中“类”的范畴。从概念上讲，String就是Unicode字符序列，我们称之为字符串。  </p>
+<p>每个用双引号扩起来的字符串就是就是一个String类的实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"Hello World!"</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="其他常见引用数据类型"><a href="#其他常见引用数据类型" class="headerlink" title="其他常见引用数据类型"></a>其他常见引用数据类型</h2><p>每一种基本数据类型在Java中都有对应的封装类型，也就是引用类型：  </p>
+<ul>
+<li>整数类型：Integer、Short、Long、Byte</li>
+<li>浮点数类型：Float、Double</li>
+<li>字符型：Character</li>
+<li>布尔类型：Boolean</li>
+</ul>
+<h1 id="基本数据类型与引用数据类型之间的转换"><a href="#基本数据类型与引用数据类型之间的转换" class="headerlink" title="基本数据类型与引用数据类型之间的转换"></a>基本数据类型与引用数据类型之间的转换</h1><p>封装类为各个数据类型提供一些数据的操作方法，可以直接使用。</p>
+<h2 id="基本数据类型-gt-引用数据类型"><a href="#基本数据类型-gt-引用数据类型" class="headerlink" title="基本数据类型 -&gt; 引用数据类型"></a>基本数据类型 -&gt; 引用数据类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line">    String str = String.valueOf(a);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"基本数据类型 -&gt; 引用数据类型："</span> + str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行以上代码得到的结果是：</p>
+<blockquote>
+<p>基本数据类型 -&gt; 引用数据类型：100</p>
+</blockquote>
+<h2 id="引用数据类型-gt-基本数据类型"><a href="#引用数据类型-gt-基本数据类型" class="headerlink" title="引用数据类型 -&gt; 基本数据类型"></a>引用数据类型 -&gt; 基本数据类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    String str = <span class="string">"99"</span>;</span><br><span class="line">    <span class="keyword">int</span> a = Integer.parseInt(str);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"引用数据类型 -&gt; 基本数据类型："</span> + a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行以上代码得到的结果是：</p>
+<blockquote>
+<p>引用数据类型 -&gt; 基本数据类型：99</p>
+</blockquote>
 
       
     </div>
@@ -493,7 +514,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/" title="在Ubuntu 16.04 中安装配置Tomcat">https://blog.shaozb.xin/2018/03/configure-tomcat-in-ubuntu-16.04/</a>
+    <a href="https://blog.shaozb.xin/2018/04/java-type-of-data/" title="Java中的数据类型">https://blog.shaozb.xin/2018/04/java-type-of-data/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -508,9 +529,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
-          
-            <a href="/tags/Mysql/" rel="tag"># Mysql</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -523,15 +542,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/java-outline-of-program/" rel="next" title="Java 程序设计概述">
+                <i class="fa fa-chevron-left"></i> Java 程序设计概述
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/java-outline-of-program/" rel="prev" title="Java 程序设计概述">
-                Java 程序设计概述 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装环境"><span class="nav-number">2.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Java环境"><span class="nav-number">3.</span> <span class="nav-text">配置Java环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Tomcat服务器"><span class="nav-number">4.</span> <span class="nav-text">配置Tomcat服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Mysql"><span class="nav-number">5.</span> <span class="nav-text">配置Mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phpMyAdmin（可选）"><span class="nav-number">6.</span> <span class="nav-text">phpMyAdmin（可选）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-1"><span class="nav-number">6.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">6.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值类型"><span class="nav-number">2.1.</span> <span class="nav-text">数值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整型"><span class="nav-number">2.1.1.</span> <span class="nav-text">整型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#int"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">int</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#short"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">short</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#long"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">long</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#byte"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">byte</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点类型"><span class="nav-number">2.1.2.</span> <span class="nav-text">浮点类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#float"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#double"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">double</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符类型"><span class="nav-number">2.2.</span> <span class="nav-text">字符类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#char"><span class="nav-number">2.2.1.</span> <span class="nav-text">char</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔类型"><span class="nav-number">2.3.</span> <span class="nav-text">布尔类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#boolean"><span class="nav-number">2.3.1.</span> <span class="nav-text">boolean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型之间的转换"><span class="nav-number">2.4.</span> <span class="nav-text">基本数据类型之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动类型转换"><span class="nav-number">2.4.1.</span> <span class="nav-text">自动类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制类型转换"><span class="nav-number">2.4.2.</span> <span class="nav-text">强制类型转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用数据类型"><span class="nav-number">3.</span> <span class="nav-text">引用数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String类型"><span class="nav-number">3.1.</span> <span class="nav-text">String类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他常见引用数据类型"><span class="nav-number">3.2.</span> <span class="nav-text">其他常见引用数据类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本数据类型与引用数据类型之间的转换"><span class="nav-number">4.</span> <span class="nav-text">基本数据类型与引用数据类型之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型-gt-引用数据类型"><span class="nav-number">4.1.</span> <span class="nav-text">基本数据类型 -&gt; 引用数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用数据类型-gt-基本数据类型"><span class="nav-number">4.2.</span> <span class="nav-text">引用数据类型 -&gt; 基本数据类型</span></a></li></ol></li></ol></div>
             
 
           </div>
