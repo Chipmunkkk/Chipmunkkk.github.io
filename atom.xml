@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chipmunkkk.github.io</id>
     <title>Shawzb</title>
-    <updated>2021-11-03T15:31:07.662Z</updated>
+    <updated>2021-11-03T15:32:09.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chipmunkkk.github.io"/>
     <link rel="self" href="https://chipmunkkk.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://chipmunkkk.github.io/post/hashmap/">
         </link>
         <updated>2021-11-02T15:47:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文记录下 Map 最常用的实现类 <code>HashMap</code> 相关的高频的面试知识点。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>本文记录下 Map 最常用的实现类 <code>HashMap</code> 相关的高频的面试知识点。</p>
+<!-- more -->
 <h3 id="hashmap-的底层数据结构">HashMap 的底层数据结构</h3>
 <p>数组 + 链表。结合了数组和链表二者的优点，利用数组可以在计算<code>键</code>的 hash 值以后快速的定位到所属位置，而当发生 hash 冲突（即两个<code>键</code>的 hash 值相等）时，又可以将元素以链表的形式存储。在 JDK 1.8 以后当链表的长度超过8以后会转变为红黑树。</p>
 <h3 id="hashmap-的工作原理">HashMap 的工作原理</h3>

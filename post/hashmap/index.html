@@ -6,7 +6,7 @@
 
 <title>HashMap | Shawzb</title>
 
-<link rel="shortcut icon" href="https://chipmunkkk.github.io/favicon.ico?v=1635953398171">
+<link rel="shortcut icon" href="https://chipmunkkk.github.io/favicon.ico?v=1635953528523">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://chipmunkkk.github.io/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1635953398171" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1635953528523" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -103,6 +103,7 @@
                 </div>
                 <div class="post-content">
                     <p>本文记录下 Map 最常用的实现类 <code>HashMap</code> 相关的高频的面试知识点。</p>
+<!-- more -->
 <h3 id="hashmap-的底层数据结构">HashMap 的底层数据结构</h3>
 <p>数组 + 链表。结合了数组和链表二者的优点，利用数组可以在计算<code>键</code>的 hash 值以后快速的定位到所属位置，而当发生 hash 冲突（即两个<code>键</code>的 hash 值相等）时，又可以将元素以链表的形式存储。在 JDK 1.8 以后当链表的长度超过8以后会转变为红黑树。</p>
 <h3 id="hashmap-的工作原理">HashMap 的工作原理</h3>
