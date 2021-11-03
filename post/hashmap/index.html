@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Shawzb</title>
+<title>HashMap | Shawzb</title>
 
 <link rel="shortcut icon" href="https://chipmunkkk.github.io/favicon.ico?v=1635953357604">
 
@@ -25,11 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -85,56 +85,74 @@
     </div>
 </nav>
 
-        <div class="post-container">
-            <div class="post-detail gt-bg-theme-color-first">
-                <article class="gt-post-content">
-                    <h2 class="post-title">归档</h2>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    HashMap
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-11-02 ·
+                    </time>
+                    
+                        <a href="https://chipmunkkk.github.io/tag/CKCz-E774/" class="post-tags">
+                            # HashMap
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>本文记录下 Map 最常用的实现类 <code>HashMap</code> 相关的高频的面试知识点。</p>
+<h3 id="hashmap-的底层数据结构">HashMap 的底层数据结构</h3>
+<p>数组 + 链表。结合了数组和链表二者的优点，利用数组可以在计算<code>键</code>的 hash 值以后快速的定位到所属位置，而当发生 hash 冲突（即两个<code>键</code>的 hash 值相等）时，又可以将元素以链表的形式存储。在 JDK 1.8 以后当链表的长度超过8以后会转变为红黑树。</p>
+<h3 id="hashmap-的工作原理">HashMap 的工作原理</h3>
+<ul>
+<li>根据 HashMap 的底层结构可以知道，要想确定一个<code>键值对（K/V）</code>的位置要对 K 进行 hash 运算，再结合当前数组长度确定一个下标</li>
+<li>如果计算出的下标没有元素（未发生 hash 冲突），那就依据当前的键值对构造一个 <code>Node</code> 放入数组中</li>
+<li>如果发生 hash 冲突时，先判断二者的 K 是否相等，如果相等说明是同一个元素，此时更新键值对的值即可</li>
+<li>如果 K 不相等，那就将当前元素插入到链表当中（JDK 1.7 是头插，1.8 是尾插）</li>
+<li>插入元素后判断当前数组的长度是否大于 capacity * loadfactor，如果大于，会对整个数组进行扩容，新的数组长度为 2 * capacity，之后对 HashMap 中的所有 K 重新进行 hash，确定在新数组中的位置</li>
+</ul>
+<h3 id="hash-算法的实现">Hash 算法的实现</h3>
+<pre><code class="language-java">static final int hash(Object key) {
+    int h;
+    return (key == null) ? 0 : (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+}
+</code></pre>
+<p>计算 K 的 hashCode 的高16位异或低16位的值，让高16位的值参与了 hash 运算，而且减少了 hash 冲突的概率</p>
+<h3 id="如何确定-table-的容量loadfactor-又是什么">如何确定 table 的容量？loadFactor 又是什么？</h3>
+<ul>
+<li>table 数组的长度由 capacity 决定，默认值是16，最大值是 1 &lt;&lt; 30</li>
+<li>loadFactor 是负载因子，用于规定 table 数组是否需要扩容。默认的负载因子是 0.75</li>
+</ul>
+<h3 id="jdk17-和-jdk18-中的-hashmap-有什么不同">JDK1.7 和 JDK1.8 中的 HashMap 有什么不同</h3>
+<ul>
+<li>底层数据结构不同，1.7 中是数组 + 链表，而在 1.8 中当链表的长度大于 8 且数组长度大于 64 时会转变为红黑树（小于 6 时会重新变回链表）</li>
+<li>在发生 hash 冲突时，1.7 中是插入到链表的头部，而 1.8 则是插入链表尾部</li>
+</ul>
+<h3 id="高并发下-hashmap-会出现什么问题">高并发下 HashMap 会出现什么问题</h3>
+<p>上面提到在 1.8 中链表的插入位置从头部变成尾部了，主要原因就是在高并发下头插会修改链表元素的位置导致产生环</p>
+<h3 id="concurrenthashmap-是如何保证线程安全">ConcurrentHashMap 是如何保证线程安全</h3>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://chipmunkkk.github.io/post/hello-gridea/" class="post-title gt-a-link">
+                    Hello Gridea
+                </a>
+            </div>
         
 
-<div class="archives-container">
-    
-        <h2 class="year gt-c-cotent-color-first">2021</h2>
         
-            
-                <article class="post">
-                    <a href="https://chipmunkkk.github.io/post/hashmap/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2021-11-02&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            HashMap
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-        
-    
-        <h2 class="year gt-c-cotent-color-first">2018</h2>
-        
-            
-        
-            
-                <article class="post">
-                    <a href="https://chipmunkkk.github.io/post/hello-gridea/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2018-12-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Hello Gridea
-                        </div>
-                    </a>
-                </article>
-            
-        
-    
-</div>
 
-        <div class="pagination-container">
-    
-    
-</div>
+        
 
-    </article>
-</div>
-</div>
+        
+
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">Shawzb's Blog</div>
     <div class="social-container">
