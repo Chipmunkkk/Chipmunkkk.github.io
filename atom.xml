@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chipmunkkk.github.io</id>
     <title>Shawzb</title>
-    <updated>2021-11-03T15:29:23.861Z</updated>
+    <updated>2021-11-03T15:31:07.662Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chipmunkkk.github.io"/>
     <link rel="self" href="https://chipmunkkk.github.io/atom.xml"/>
@@ -46,7 +46,6 @@
 </ul>
 <h3 id="高并发下-hashmap-会出现什么问题">高并发下 HashMap 会出现什么问题</h3>
 <p>上面提到在 1.8 中链表的插入位置从头部变成尾部了，主要原因就是在高并发下头插会修改链表元素的位置导致产生环</p>
-<h3 id="concurrenthashmap-是如何保证线程安全">ConcurrentHashMap 是如何保证线程安全</h3>
 ]]></content>
     </entry>
     <entry>
